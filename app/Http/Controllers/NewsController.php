@@ -10,6 +10,7 @@ class NewsController extends Controller
     public function index(){
 
         $data = json_decode( file_get_contents(resource_path(). '\news.json') , true);
+       // dd($data);
         $newsPapers = array_keys($data);
         $final = array();
 
@@ -17,10 +18,9 @@ class NewsController extends Controller
             foreach($value as $da){
                 $final[] = $da;
                // $final[$newsPapers[$dat]] = $da;
-
             }
         }
         //dd($final);
-        return view('index')->with('data', $final);
+        return view('index')->with('data', $data);
     }
 }

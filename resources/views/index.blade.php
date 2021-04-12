@@ -28,12 +28,13 @@
                     <h2>NewsAgencies</h2>
                     <div class="row">
 
-                        @foreach ($data as $item)
-                            @foreach ($item as $i)
+                        @foreach ($data as $item =>$val)
+                            @foreach ($val['latestnews'] as $i)
                                 <div class="col-4">
                                     <div class="card">
 
                                         <div class="card-body">
+                                            <h4 class="card-title">{{$item}}</h4>
                                             <h4 class="card-title">{{$i['title']}}</h4>
                                             <p class="card-text">{{$i['Content']}}</p>
                                         </div>
