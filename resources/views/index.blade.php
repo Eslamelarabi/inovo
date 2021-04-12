@@ -26,6 +26,8 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <h2>NewsAgencies</h2>
+                    <a href="{{route('home', 'rate-de')}}"> sort by rate DE --- </a>
+                    <a href="{{route('home', 'rate-ae')}}"> AE sort by rate</a>
                     <div class="row">
 
                         @foreach ($data as $item =>$val)
